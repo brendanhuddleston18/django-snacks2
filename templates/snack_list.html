@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block headercontent %}
+Home
+{% endblock headercontent %}
+
+{% block maincontent %}
+<h2>Snack List</h2>
+<ul>
+{% for snack in object_list %}
+
+    <ul>
+        <p>
+            {{snack.name}}
+        </p>
+        <p>
+            {{snack.description}}
+        </p>
+        <p>
+            {{snack.purchaser}}
+        </p>
+    </ul>
+
+{% endfor %}   
+{% endblock %}
+</ul>
